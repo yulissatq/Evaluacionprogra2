@@ -1,0 +1,11 @@
+
+{% if user.is_authenticated %}
+<p> Bienvenido, <b>{{user.username}}</b>
+<a href="{% url 'logoutPage' %}">Cerrar Sesion</a></p>
+{% endif %}
+
+{% for msg in messages %}
+<div class="card-panel teal lighten-1">
+{{msg.message}}
+</div>
+{% endfor %}

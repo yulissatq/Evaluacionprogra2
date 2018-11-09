@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    {% load staticfiles %}
+    <!-- Materialize -->
+    <link rel="stylesheet" href="{% static 'materialize/css/mat.css' %}">
+
+    <title>Cliente</title>
+  </head>
+  <body>
+<div>
+    <h3>Bienvenidos</h3>
+    <a href="login">Ingresar</a>
+    {% block contenido %}
+
+
+    {% endblock %}
+</div>
+</div>
+  
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Materialize JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="{% static 'materialize/js/materialize.min.js' %}"></script>
+</body>
+</html>

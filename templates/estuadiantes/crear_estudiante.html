@@ -1,0 +1,16 @@
+{% extends "inicio.html" %}
+
+{% block contenido %}
+<div class="well">
+    <form method="post">
+        {{i.errors}}
+        {% for i in f%}
+        {{i.label_tag}}{{i}}
+        {% csrf_token %}
+        {% endfor %}
+        <br>
+        <br>
+        <input class = "btn waves-effect waves-light" type="submit" value="GUARDAR">
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends 'inicio.html' %}
+
+{% block contenido %}
+<a href="{% url 'crear'%}">Crear</a>
+
+<table>
+<thead>
+    <td>
+        Cedula
+    </td>
+    <td>
+        Nombres
+    </td>
+    <td>
+        Apellidos
+    </td>
+    <td>
+        Edad
+    </td>
+    <td>
+        Direccion
+    </td>
+</thead>
+<tbody>
+{% for i in lista%}
+<tr>
+    <td>{{i.cedula}}</td>
+    <td>{{i.nombres}}</td>
+    <td>{{i.apellidos}}</td>
+    <td>{{i.edad}}</td>
+    <td>{{i.direccion}}</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+{% endblock%}
